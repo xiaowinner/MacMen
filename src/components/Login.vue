@@ -1,6 +1,7 @@
 <template>
   <div id="login">
     <p>XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+    <p>KKKKKKKKKKKKKKK</p>
     {{msg}}
   </div>
 </template>
