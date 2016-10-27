@@ -1,13 +1,7 @@
 <template>
-  <div id="login">
-    <p>XXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
-    <p>KKKKKKKKKKKKKKK</p>
-    {{msg}}
-  </div>
+
 </template>
-<style lang="sass" scoped>
-  @import "../css/components/kk.scss";
-</style>
+
 <script>
   export default{
     data(){
@@ -16,4 +10,9 @@
       }
     }
   }
+
 </script>
+
+<style lang="sass" scoped>
+  @import "../css/components/login.scss";
+</style>
