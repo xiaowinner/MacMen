@@ -1,11 +1,6 @@
 <template>
   <div id="app">
-    <img class="logo" src="./assets/logo.png">
-    <hello></hello>
     <login></login>
-    <p>
-      Welcome to your Vue.js app!
-    </p>
   </div>
 </template>
 
@@ -21,6 +16,7 @@
 </script>
 
 <style>
+  @import "./css/pure-min.css";
   html {
     height: 100%;
   }
