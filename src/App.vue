@@ -23,8 +23,6 @@
   }
 
   body {
-    background-color: rgba(15, 20, 28, 0.5);
-    filter: alpha(opacity:30);
     display: flex;
     align-items: center;
     justify-content: center;
