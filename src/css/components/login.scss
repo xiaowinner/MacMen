@@ -23,6 +23,12 @@ input:-webkit-autofill {
 
 }
 
+p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 p > button {
   margin-top: 30px;
   width: 100px;
@@ -35,8 +41,19 @@ p > button {
 
 
 div {
-  margin-top: 40%;
+  margin-top: 15%;
 }
+
+
+div {
+  width: auto;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 
 
