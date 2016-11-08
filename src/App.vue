@@ -1,16 +1,20 @@
 <template>
   <div id="app">
-    <login></login>
+    <!--home></home-->
+    <headers></headers>
+    <home></home>
   </div>
 </template>
 
 <script>
-  import Hello from './components/Hello'
+  import Home from './components/Home.vue'
   import Login from './components/Login'
+  import Headers from './components/Headers.vue'
   export default {
     components: {
-      Hello,
-      Login
+      Home,
+      Login,
+      Headers
     }
   }
 </script>
