@@ -2,7 +2,8 @@
   <div id="app">
     <!--home></home-->
     <headers></headers>
-    <home></home>
+    <!--home></home-->
+    <contents></contents>
   </div>
 </template>
 
@@ -10,11 +11,13 @@
   import Home from './components/Home.vue'
   import Login from './components/Login'
   import Headers from './components/Headers.vue'
+  import Contents from './components/Content.vue'
   export default {
     components: {
       Home,
       Login,
-      Headers
+      Headers,
+      Contents
     }
   }
 </script>
