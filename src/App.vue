@@ -1,9 +1,10 @@
 <template>
   <div id="app">
     <!--home></home-->
-    <headers></headers>
+    <!--headers></headers-->
     <!--home></home-->
-    <contents></contents>
+    <home></home>
+    <kkpage></kkpage>
   </div>
 </template>
 
@@ -12,12 +13,14 @@
   import Login from './components/Login'
   import Headers from './components/Headers.vue'
   import Contents from './components/Content.vue'
+  import Kkpage from './components/KkPage.vue'
   export default {
     components: {
       Home,
       Login,
       Headers,
-      Contents
+      Contents,
+      Kkpage
     }
   }
 </script>

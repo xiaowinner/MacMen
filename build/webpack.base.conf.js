@@ -5,7 +5,9 @@ var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: './src/main.js',
+    /*jquery: './src/jquery-1.10.2.min.js',
+    kkpager: './src/kkpager.js'*/
   },
   output: {
     path: config.build.assetsRoot,
@@ -19,7 +21,7 @@ module.exports = {
       'vue': 'vue/dist/vue.common.js',
       'src': path.resolve(__dirname, '../src'),
       'assets': path.resolve(__dirname, '../src/assets'),
-      'components': path.resolve(__dirname, '../src/components')
+      'components': path.resolve(__dirname, '../src/components'),
     }
   },
   resolveLoader: {
@@ -27,6 +29,10 @@ module.exports = {
   },
   module: {
     loaders: [
+      {
+        test: require.resolve('jquery'),
+        loader: 'expose?jQuery!expose?$'
+      },
       {
         test: /\.vue$/,
         loader: 'vue'

@@ -81,6 +81,7 @@ h3 {
   text-transform: uppercase;
   color: #aaa;
   border-bottom: 1px solid #eee;
+  margin-bottom: 1em;
   padding: 0.4em 0;
   font-size: 80%;
   font-weight: 500;
@@ -189,3 +190,13 @@ h3 {
   /* Or set the width explicitly: */
   /* width: 10em; */
 }
+
+
+#show {
+  position:relative;
+  line-height:1.4em;
+  /* 3 times the line-height to show 3 lines */
+  height:4.2em;
+  overflow:hidden;
+}
+

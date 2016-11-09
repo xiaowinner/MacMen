@@ -10,11 +10,14 @@
     "start": "node server/bin/www"
   },
   "dependencies": {
+    "babel-runtime": "^6.18.0",
     "body-parser": "~1.15.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "ejs": "~2.4.1",
+    "expose-loader": "^0.7.1",
     "express": "~4.13.4",
+    "jquery": "^1.11.0",
     "morgan": "~1.7.0",
     "node-sass": "^3.10.1",
     "sass": "^0.5.0",
