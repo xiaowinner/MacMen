@@ -6,6 +6,8 @@
 
 </script>
 
-<div>
-
-</div>
+<style scoped>
+  div {
+    margin-top: 20px;
+  }
+</style>

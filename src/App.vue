@@ -14,13 +14,15 @@
   import Headers from './components/Headers.vue'
   import Contents from './components/Content.vue'
   import Kkpage from './components/KkPage.vue'
+  import Footers from './components/Footer.vue'
   export default {
     components: {
       Home,
       Login,
       Headers,
       Contents,
-      Kkpage
+      Kkpage,
+      Footers
     }
   }
 </script>
