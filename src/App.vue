@@ -1,10 +1,8 @@
 <template>
   <div id="app">
-    <!--home></home-->
-    <!--headers></headers-->
-    <!--home></home-->
-    <home></home>
-    <kkpage></kkpage>
+    <headers v-if=""></headers>
+    <home v-if="false"></home>
+    <kkpage v-if="false"></kkpage>
   </div>
 </template>
 
@@ -23,6 +21,17 @@
       Contents,
       Kkpage,
       Footers
+    },
+    computed: {
+        header() {
+            return this.$store.state.header_state;
+        },
+      home() {
+            return this.$store.state.home_state;
+      },
+      kkpage() {
+            return this.$store.state.kkpage_state;
+      }
     }
   }
 </script>

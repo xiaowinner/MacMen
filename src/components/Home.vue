@@ -19,7 +19,7 @@
 
     </div>
 
-    <div class="content pure-u-1 pure-u-3-4">
+    <div class="content pure-u-1 pure-u-3-4" style="width: 75%">
       <div v-for="n in 10">
         <!-- A wrapper for all the blog posts -->
         <div class="posts">
