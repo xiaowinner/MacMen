@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <headers v-if=""></headers>
-    <home v-if="false"></home>
-    <kkpage v-if="false"></kkpage>
+    <headers v-if="header"></headers>
+    <home v-if="home"></home>
+    <kkpage v-if="kkpage"></kkpage>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -23,14 +24,14 @@
       Footers
     },
     computed: {
-        header() {
-            return this.$store.state.header_state;
-        },
+      header() {
+        return this.$store.state.header_state;
+      },
       home() {
-            return this.$store.state.home_state;
+        return this.$store.state.home_state;
       },
       kkpage() {
-            return this.$store.state.kkpage_state;
+        return this.$store.state.kkpage_state;
       }
     }
   }
@@ -39,6 +40,7 @@
 <style>
   @import "./css/pure-min.css";
   @import "./css/font-awesome/css/font-awesome.min.css";
+
   html {
     height: 100%;
   }

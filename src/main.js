@@ -21,13 +21,32 @@ const store = new Vuex.Store({
 
   },
   mutations: {
+    headerStateChangeFalse(state) {
+      state.header_state = false;
+    },
+    homeStateChangeFalse(state) {
+      state.home_state = false;
+    },
+    kkPageStateChangeFalse(state) {
+      state.kkpage_state = false;
+    },
 
+    //将状态由false改为true
+    headerStateChangeTrue(state) {
+      state.header_state = true;
+    },
+    homeStateChangeTrue(state) {
+      state.home_state = true;
+    },
+    kkPageStateChangeTrue(state) {
+      state.kkpage_state = true;
+    }
   }
 });
 
 const routes = [
   {path: '/login', component: Login},
-  {path: '/', component: Home}
+
 ];
 
 const router = new VueRouter({
