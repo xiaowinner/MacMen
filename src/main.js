@@ -7,6 +7,8 @@ import Vuex from 'vuex'
 import Hello from './components/Hello'
 import Login from './components/Login'
 import Home from './components/Home.vue'
+import Content from './components/Content.vue'
+import Homekk from './components/Homekk.vue'
 
 
 Vue.use(VueRouter);
@@ -46,6 +48,8 @@ const store = new Vuex.Store({
 
 const routes = [
   {path: '/login', component: Login},
+  {path: '/content', component: Content},
+  {path: '/kk', component: Homekk}
 
 ];
 
@@ -54,6 +58,7 @@ const router = new VueRouter({
 });
 
 const app = new Vue({
+
   router,
   store,
   render:  h=>h(App)

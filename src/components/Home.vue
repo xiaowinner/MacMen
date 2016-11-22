@@ -31,7 +31,8 @@
               <img class="post-avatar" alt="Tilo Mitra&#x27;s avatar" height="48" width="48"
                    src="../img/1.jpg">
 
-              <a class="post-title" target="_blank" href="#">Introducing Pure</a>
+              <!--a class="post-title" target="_blank" href="#">Introducing Pure</a-->
+              <router-link class="post-title" target="_blank" to="/content" @click.native="contentState">Introducing Pure</router-link>
               <div class="content-subhead"></div>
               <p class="post-meta">
                 By <a href="#" class="post-author">Tilo Mitra</a> under <a class="post-category post-category-design"
@@ -67,6 +68,12 @@
   export default {
     data() {
       return {}
+    },
+    methods: {
+        contentState: function () {
+          this.$store.commit('homeStateChangeFalse');
+          this.$store.commit('kkPageStateChangeFalse');
+        }
     }
   }
 
