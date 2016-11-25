@@ -1,69 +1,35 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex'
-import Hello from './components/Hello'
-import Login from './components/Login'
-import Home from './components/Home.vue'
-import Content from './components/Content.vue'
-import Homekk from './components/Homekk.vue'
+import App from './App.vue'
+import Login from './components/Login.vue'
+import Detail from './components/Detail.vue'
+import Index from './components/Index.vue'
+import Headers from './components/Headers.vue'
 
 
 Vue.use(VueRouter);
 Vue.use(Vuex);
-/* eslint-disable no-new */
-
-const store = new Vuex.Store({
-  state: {
-    header_state: true,
-    home_state: true,
-    kkpage_state: true
-
-  },
-  mutations: {
-    headerStateChangeFalse(state) {
-      state.header_state = false;
-    },
-    homeStateChangeFalse(state) {
-      state.home_state = false;
-    },
-    kkPageStateChangeFalse(state) {
-      state.kkpage_state = false;
-    },
-
-    //将状态由false改为true
-    headerStateChangeTrue(state) {
-      state.header_state = true;
-    },
-    homeStateChangeTrue(state) {
-      state.home_state = true;
-    },
-    kkPageStateChangeTrue(state) {
-      state.kkpage_state = true;
-    }
-  }
-});
+Vue.config.devtools = true;
 
 const routes = [
+
   {path: '/login', component: Login},
-  {path: '/content', component: Content},
-  {path: '/kk', component: Homekk}
+  {path: '/detail', component: Detail},
+  {path: '/', component: Index}
 
 ];
 
 const router = new VueRouter({
-  routes
+  routes,
+  model: 'hash',
+  base: '/'
 });
 
 const app = new Vue({
 
   router,
-  store,
   render:  h=>h(App)
 }).$mount('#app');
-/*new Vue({
-  el: '#app',
-  render: h => h(App)
-});*/

@@ -70,10 +70,7 @@
       return {}
     },
     methods: {
-        contentState: function () {
-          this.$store.commit('homeStateChangeFalse');
-          this.$store.commit('kkPageStateChangeFalse');
-        }
+
     }
   }
 

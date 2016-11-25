@@ -131,6 +131,7 @@
 
 
   export default {
+
     created: function () {
       $(pages);
     },
@@ -142,9 +143,6 @@
     }
   }
 </script>
-
 <style lang="sass" scoped>
-
   @import "../css/kkpager_blue.css";
-
 </style>

@@ -9,7 +9,7 @@
         <a class="pure-menu-link" href="http://maweiyi.xyz/#!/article?id=57e4cd9d953d0b001097faca" target="_blank">About Me</a>
       </li>
       <li class="pure-menu-item">
-        <router-link @click.native="headerState" to="/login" class="pure-menu-link" >注销</router-link>
+        <a @click="headerState" class="pure-menu-link">注销</a>
       </li>
     </ul>
 
@@ -28,21 +28,10 @@
     },
     methods: {
       headerState: function () {
-        this.$store.commit('headerStateChangeFalse');
-        this.$store.commit('homeStateChangeFalse');
-        this.$store.commit('kkPageStateChangeFalse');
-        console.log(this.$store.state.home_state);
-      },
-      homeState: function () {
-        this.$store.commit('homeStateChangeFalse');
-      },
-      kkPageState: function () {
-        this.$store.commit('kkPageStateChangeFalse');
-      },
-      homeStateTrue: function () {
-        this.$store.commit('homeStateChangeTrue');
-        this.$store.commit('kkPageStateChangeTrue');
+        this.$router.push({path: '/login'});
+
       }
+
     }
   }
 </script>

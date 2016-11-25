@@ -29,6 +29,13 @@
       return {
         msg: '这是一个登录页面!'
       }
+    },
+
+    created: function () {
+        //window.location.reload();
+    },
+    mounted: function () {
+      //this.$router.push({path: '/headers'})
     }
   }
 
