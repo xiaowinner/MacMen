@@ -32,7 +32,7 @@
                    src="../img/1.jpg">
 
               <!--a class="post-title" target="_blank" href="#">Introducing Pure</a-->
-              <router-link class="post-title" target="_blank" to="/content" @click.native="contentState">Introducing Pure</router-link>
+              <a class="post-title" target="_blank" @click="gotoContent">Introducing Pure</a>
               <div class="content-subhead"></div>
               <p class="post-meta">
                 By <a href="#" class="post-author">Tilo Mitra</a> under <a class="post-category post-category-design"
@@ -70,8 +70,12 @@
       return {}
     },
     methods: {
+      gotoContent: function () {
 
+        this.$router.push({path: '/detail'});
+      }
     }
+
   }
 
 </script>
