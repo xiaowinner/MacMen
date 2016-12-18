@@ -5,47 +5,42 @@ var mongoose = require('mongoose');
 var db = mongoose.connect('mongodb://localhost/macmen');
 mongoose.Promise = Promise;
 
-var schema = new mongoose.Schema({
+var personSchema = new mongoose.Schema({
+  _id: Number,
   name: String,
-  binary: Buffer,
-  living: Boolean,
-  updated: {type: Date, default: Date.now()},
-  age: {type: Number, min: 18, max: 65},
-  mixed: mongoose.Schema.Types.Mixed,
-  _someId: mongoose.Schema.Types.ObjectId,
-  array: [],
-  ofString: [String],
-  ofNumber: [Number],
-  ofDates: [Date],
-  ofBuffer: [Buffer],
-  ofBoolean: [Boolean],
-  ofMixed: [mongoose.Schema.Types.Mixed],
-  ofObjectId: [mongoose.Schema.Types.ObjectId],
-  nested: {
-    stuff: {type: String, lowercase: true, trim: true}
-  }
-
+  age: Number,
+  stories: [{type: mongoose.Schema.Types.ObjectId, ref: 'Story'}]
+});
+var storySchema = new mongoose.Schema({
+  _creator: {type: Number, ref: 'Person'},
+  title: String,
+  fans: [{type: Number, ref: 'Person'}]
 });
 
-var Thing = mongoose.model('Thing', schema);
+var Story = mongoose.model('Story', storySchema);
+var Person = mongoose.model('Person', personSchema);
 
-var m = new Thing;
-m.name = 'Statue of Liberty';
-m.age = 25;
-m.update = new Date();
-m.binary = new Buffer(0);
-m.living = false;
-m.mixed = {any: {thing: 'i want'}};
-m.markModified('mixed');
-m._someId = new mongoose.Schema.Types.ObjectId();
-m.array.push(1);
-m.ofString.push("strings!");
-m.ofNumber.unshift(1, 2, 3, 4);
-m.ofDates.addToSet(new Date());
-m.ofBuffer.pop();
-m.ofMixed = [1, [], 'three', {four: 5}];
-m.nested.stuff = 'good';
-m.save().then(value => {
-  console.log(value);
+/*var arron = new Person({_id: 1, name: 'Aaron', age: 100});
+arron.save(function (err, doc) {
+  if (err) {
+    console.log(err)
+  } else {
+    //console.log(doc);
+    var story1 = new Story({
+      title: 'Once upon a timex',
+      _creator: arron._id
+    });
+
+    story1.save(function (err) {
+      if (err) {
+        return
+      }
+    })
+  }
+});*/
+
+Story.findOne({title: 'Once upon a timex'}).populate('_creator').exec(function (err, story) {
+  console.log(story);
 })
+
 
