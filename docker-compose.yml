@@ -1,0 +1,18 @@
+version: "1"
+services:
+  node:
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "8080:8080"
+    command: ["npm", "run", "start"]
+    links:
+      - mongodb
+    depends_on:
+      - mongodb
+    restart: on-failure
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
